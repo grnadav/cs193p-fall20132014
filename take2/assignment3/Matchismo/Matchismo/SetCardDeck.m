@@ -16,9 +16,9 @@
     self = [super init];
     if (self) {
         for (NSInteger count=1; count<= [SetCard maxNumber]; count++) {
-            for (ShadeType shade=shade1; shade <= shade4; shade++) {
-                for (ShapeType shape=shape1; shape <= shape4; shape++) {
-                    for (ColorType color=color1; color <= color4; color++) {
+            for (ShadeType shade=shade1; shade <= shade3; shade++) {
+                for (ShapeType shape=shape1; shape <= shape3; shape++) {
+                    for (ColorType color=color1; color <= color3; color++) {
                         SetCard* card = [[SetCard alloc] init];
                         card.number = count;
                         card.shape = shape;

@@ -40,6 +40,11 @@
     
 }
 
+-(void)setGameMode:(NSUInteger)gameMode {
+    _gameMode = gameMode;
+    [self.game setMode: gameMode];
+}
+
 - (IBAction)slideHistorySlider:(id)sender {
     self.moveDescriptionLabel.alpha = 0.5;
     
@@ -55,7 +60,7 @@
     for (UIButton* button in self.cardButtons) {
         int cardButtonIndex = [self.cardButtons indexOfObject:button];
         Card* card = [self.game cardAtIndex:cardButtonIndex];
-        [button setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        [button setAttributedTitle:[self attributedTitleForCard:card] forState:UIControlStateNormal];
         [button setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         button.enabled = !card.matched;
     }
@@ -82,12 +87,12 @@
     [self updateUI];
 }
 
-- (NSString*)titleForCard:(Card*)card {
-    return card.isChosen ? card.contents : @"";
+- (NSAttributedString*)attributedTitleForCard:(Card*)card {
+    return nil;
 }
 
 - (UIImage*)backgroundImageForCard:(Card*)card {
-    return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
+    return nil;
 }
 
 @end

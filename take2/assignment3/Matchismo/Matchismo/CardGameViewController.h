@@ -13,5 +13,10 @@
 
 // protected
 - (Deck*) createDeck;
+- (NSAttributedString*)attributedTitleForCard:(Card*)card;
+- (UIImage*)backgroundImageForCard:(Card*)card;
+- (void) updateUI;
+
+@property (nonatomic) NSUInteger gameMode;
 
 @end

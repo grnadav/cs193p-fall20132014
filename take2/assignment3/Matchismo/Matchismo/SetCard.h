@@ -13,22 +13,19 @@
 typedef enum ShapeType : NSUInteger {
     shape1 = 1,
     shape2,
-    shape3,
-    shape4
+    shape3
 } ShapeType;
 
 typedef enum ShadeType : NSUInteger {
     shade1 = 1,
     shade2,
-    shade3,
-    shade4
+    shade3
 } ShadeType;
 
 typedef enum ColorType : NSUInteger {
     color1 = 1,
     color2,
-    color3,
-    color4
+    color3
 } ColorType;
 
 
